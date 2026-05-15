@@ -1,0 +1,25 @@
+# Armando Contrereas 5/15/2026
+# ps14P2
+class Student:
+    def __init__(Self, fname, lname, DistrictCode, Credits):
+        Self.fname = fname
+        Self.lname = lname
+        Self.DistrictCode = DistrictCode
+        Self.Credits = Credits
+
+    def TuitionFormula(Self):
+        if Self.DistrictCode.upper() == "I":
+            tuition = Self.Credits * 250.00
+        else:
+            tuition = Self.Credits * 500.00
+
+        return tuition
+
+# Student 1 (Chelsea Center Back)
+Student1 = Student("John", "Terry", "I", 12)
+
+# Output for Student 1
+print("Student: ", Student1.fname, Student1.lname)
+print("District Code: ", Student1.DistrictCode)
+print("Credits: ", Student1.Credits)
+print("Tuition Owed: $", format(Student1.TuitionFormula(), ".2f")) 
