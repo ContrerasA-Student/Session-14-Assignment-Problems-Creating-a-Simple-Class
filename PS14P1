@@ -6,11 +6,11 @@ class Employee:
          self.last = last
          self.pay = pay
          self.email = first + '.' + last + '@company.com'
-    def fullname(self):
+    def fname(self):
         return '{} {}'.format(self.first, self.last)
-    def calculate_bonus(self, rate):
-        bonus = self.pay * rate
-        return bonus
+    def BonusFormula(self, rate):
+        Bonus = self.pay * rate
+        return Bonus
 
 emp1 = Employee('Corey', 'Schafer', 50000)
 emp2 = Employee('Test', 'User', 60000)
@@ -21,10 +21,10 @@ emp2 = Employee('Test', 'User', 60000)
 print(emp1.email)
 print(emp2.email)
 
-print(emp1.fullname())
+print(emp1.fname())
 
-bonus_rate = float(input("Enter bonus rate (EX: .10 = 10%): "))
-bonus_amount = emp1.calculate_bonus(bonus_rate)
-print("Employee:", emp1.fullname())
-print("Salary:", emp1.pay)
-print("Bonus Amount:", bonus_amount)
+BonusRate = float(input("Enter bonus rate (EX: .10 = 10%): "))
+BonusAmount = emp1.BonusFormula(BonusRate)
+print("Employee: ", emp1.fname())
+print("Salary: ", emp1.pay)
+print("Bonus Amount: ", BonusAmount)
